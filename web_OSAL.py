@@ -50,7 +50,7 @@ HFD =map[HFD]
 LOE =map[LOE]
 gender = map[gender]
 # 数据读取，特征标注
-hp_train = pd.read_csv('E:\\Spyder_2022.3.29\\data\\machinel\\lwl_data\\OSA\\serve_osa.csv')
+hp_train = pd.read_csv('serve_osa.csv')
 
 hp_train['OSAL'] = hp_train['OSAL'].apply(lambda x : +1 if x==1 else 0)
 
