@@ -4,7 +4,6 @@ import pandas as pd
 import sklearn
 import matplotlib.pyplot as plt
 from sklearn.ensemble import GradientBoostingClassifier
-from imblearn.over_sampling import RandomOverSampler
 #应用标题
 st.set_page_config(page_title='Pred hypertension in  patients with OSA')
 st.title('Prediction Model of Obstructive Sleep Apnea-related Hypertension: Machine Learning–Based Development and Interpretation Study')
@@ -53,7 +52,6 @@ random_state_new = 50
 X_ros = np.array(hp_train[features])
 y_ros = np.array(hp_train[target])
 gbm = GradientBoostingClassifier(n_estimators=100, learning_rate=1, max_depth=1, random_state=random_state_new)
-# XGB = XGBClassifier(n_estimators=360, max_depth=2, learning_rate=0.1,random_state = 0)
 gbm.fit(X_ros, y_ros)
 sp = 0.5
 #figure
